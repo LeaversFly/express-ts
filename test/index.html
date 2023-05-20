@@ -1,0 +1,54 @@
+<!--
+Filename: c:\Users\Gorit\Desktop\test\fmin-study\express\test\index.html
+Path: c:\Users\Gorit\Desktop\test\fmin-study\express
+Created Date: Sunday, September 25th 2022, 5:21:30 pm
+Author: CodingGorit
+
+Copyright (c) 2022 fmin-courses
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test for express api</title>
+</head>
+
+<body>
+
+    <script>
+        const basrUrl = "http://localhost:1347";
+
+        const userApi = {
+            user: "/api/private/v1/user"
+        }
+
+        baseTest();
+
+        userTest(); 
+        // handle string
+        function baseTest() {
+            fetch(basrUrl, {
+                method: "get"
+            }).then(res => res.text()) 
+                .then(res => {
+                    console.log(res);
+                });
+        }
+
+        // handle JSON
+        function userTest() {
+            fetch(basrUrl + userApi.user, {
+                method: "get"
+            }).then(res => res.json())
+                .then(res => {
+                    console.log(res);
+                });
+        }
+    </script>
+</body>
+
+</html>

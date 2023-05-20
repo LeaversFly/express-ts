@@ -1,0 +1,9 @@
+node_modules
+dist
+config
+
+yarn.lock
+package-lock.json
+
+pnpm-lock.yaml
+.npmignore

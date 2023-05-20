@@ -1,0 +1,37 @@
+{
+  "name": "express-ts",
+  "version": "1.0.0",
+  "description": "express-ts cli",
+  "main": "index.js",
+  "repository": "https://gitee.com/CodingGorit/express-ts.git",
+  "author": "CodingGorit <1225277469@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dist": "npm run build",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "start": "node ./dist/app.js",
+    "prod": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "config": "^3.3.8",
+    "dayjs": "^1.11.5",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.6.0",
+    "mysql": "^2.18.1",
+    "nacos": "^2.5.0",
+    "nodemailer": "^6.8.0",
+    "pino": "^8.5.0",
+    "pino-pretty": "^9.1.0",
+    "typescript": "^4.8.3"
+  },
+  "devDependencies": {
+    "@types/config": "^3.3.0",
+    "@types/express": "^4.17.14",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^18.7.18",
+    "@types/nodemailer": "^6.4.6",
+    "@types/pino": "^7.0.5",
+    "ts-node-dev": "^2.0.0"
+  }
+}
