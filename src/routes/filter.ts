@@ -1,10 +1,10 @@
 const express = require('express');
-import { IRouterConf } from "../../..";
+import { IRouterConf } from "./index";
 import { Request, Response, NextFunction } from 'express';
-import log from "../../../../utils/log";
-import Utils from "../../../../utils/Utils";
-import { IResponse } from "../../../../types/index";
-import { Result } from "src/common/Result";
+import log from "../utils/log";
+import Utils from '../utils/Utils';
+import { IResponse } from "../types";
+import { Result } from '../common/Result';
 
 const utils = Utils.getInstance();
 const ignorePath = utils.getConfig<Array<string>>("ignorePath") as string[];

@@ -1,11 +1,11 @@
 const express = require('express');
-import { IRouterConf } from "../../../..";
+import { IRouterConf } from "../index.js"
 import { Request, Response, NextFunction } from 'express';
-import log from "../../../../../utils/log";
-import { Result } from "../../../../../common/Result";
-import { ResultCodeEnum, ResultMessageEnum } from "../../../../../enums/ResultEmums";
-import { IResponse } from "../../../../../types";
-import { getRandomVerifyCode } from "../../../../../service/ToolsService";
+import log from "../../utils/log";
+import { Result } from "../../common/Result";
+import { ResultCodeEnum, ResultMessageEnum } from "../../enums/ResultEmums";
+import { IResponse } from "../../types";
+import { getRandomVerifyCode } from "../../service/ToolsService";
 
 const tools = express.Router();
 
@@ -24,12 +24,6 @@ tools.get("/verifycode/:code",
             res.sendResult(Result.paramsError());
         }
     }
-);
-
-// 错误反馈上报
-tools.post("/mini/error/feedback",
-
-    // 插入一条数据
 );
 
 const routes: Array<IRouterConf> = [{

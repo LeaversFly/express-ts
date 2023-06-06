@@ -1,9 +1,9 @@
 const express = require('express');
-import { IRouterConf } from "../../..";
+import { IRouterConf } from "./index";
 import { Request, Response, NextFunction } from 'express';
-import log from "../../../../utils/log";
-import { Result } from "../../../../common/Result";
-import { ResultCodeEnum, ResultMessageEnum } from "../../../../enums/ResultEmums";
+import log from "../utils/log";
+import { Result } from "../common/Result";
+import { ResultCodeEnum, ResultMessageEnum } from "../enums/ResultEmums";
 
 const common = express.Router();
 const TAG = "common";

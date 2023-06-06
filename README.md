@@ -1,11 +1,11 @@
 ## 介绍
 
-> 一个小巧的 express + ts 脚手架
+> 自定义 express + ts 脚手架
 
 body-parser 使用
 qs
 
-# 地址
+# 原项目地址
 
 [Gitee](https://gitee.com/CodingGorit/express-ts)
 
@@ -20,8 +20,8 @@ middleware -> routes(api) —> service —> mysql
 基础开发 CRUD 开发
 
 1. db/studentManagementSystemAdvance.sql 导入你的本地数据库中
-2. 见 src\routes\api\private\v1\examples.ts 的接口【主要用于接受参数】
-3. 见 src\service\ExamplesService.ts 【业务逻辑层，主要用来判断】,写了两个示例【同步 和 异步】与数据库对接，推荐异步写法
+2. 见 src\routes\web\examples.ts 的接口【主要用于接受参数】
+3. 见 src\service\ExamplesService.ts 【业务逻辑层，主要用来判断】,使用异步写法
 
 ## 代码结构
 
@@ -38,11 +38,10 @@ middleware -> routes(api) —> service —> mysql
         - registerExperssConfig.ts # 挂载express框架
         - registerNacosClient.ts # 挂载nacos clinet（注册中心 和 配置中心）
         - responseHeader.ts # 设置返回头（跨域配置）
-        - validator.ts # 校验器
     -models # 数据模型层
     -routes  # 请求路由
         -index.ts # 路由挂载
-        -api\private\v1 # 请求路径
+        -web #路由模块
     -service # 业务代码（具体逻辑实现）
     -types # 类型目录
     -utils # 工具类目录

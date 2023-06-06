@@ -1,8 +1,3 @@
-/**
- * @Author Gorit
- * @Date 2022年9月19日
- */
-
 import config from 'config';
 import { isPlainObject } from './ObjectUtils';
 
@@ -45,7 +40,7 @@ class Utils {
     }
 
     // 驼峰转下划线
-    public static upperCharToUnderLine (data: object) {
+    public static upperCharToUnderLine(data: object) {
         if (!data) {
             return {};
         }
@@ -59,7 +54,7 @@ class Utils {
         return result;
     }
 
-    public getRandomVerfiyCode (len = 8) {
+    public getRandomVerfiyCode(len = 8) {
         if (len <= 0) {
             len = 6;
         }
@@ -76,7 +71,7 @@ class Utils {
     }
 
     // 正则表达式检查邮箱是否合法
-    public static isMail (mail: string) {
+    public static isMail(mail: string) {
         if (!mail) {
             return false;
         }

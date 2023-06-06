@@ -1,8 +1,3 @@
-/**
- * @Author CodingGorit
- * @Date 2022年9月20日
- * @abstract 定义 type 和 interface
- */ 
 import { Response } from 'express';
 import { Result } from '../common/Result';
 
