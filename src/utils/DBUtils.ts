@@ -1,6 +1,7 @@
 import { IDBConfig } from "../types";
 import Utils from "./Utils";
-const mysql = require("mysql");
+
+const mysql = require("mysql2");
 
 const ENV = Utils.getInstance().getConfig<boolean>("env");
 const config = Utils.getInstance().getConfig<object>("db_config") as object;

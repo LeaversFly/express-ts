@@ -62,11 +62,10 @@ middleware -> routes(api) —> service —> mysql
 
 1. typescript 支持
 2. nacos client 支持
-3. mysql 支持（默认 mysql5.7，如果有需要 mysql8 的，见 error.md） v1 接口基于 mysql，后续 v2 会集成
-4. config 支持（使用配置文件）
-5. 跨域支持
-6. 覆盖全路径
-7. 新增接口请求限制
+3. config 支持（使用配置文件）
+4. 跨域支持
+5. 覆盖全路径
+6. 新增接口请求限制
 
 ### TODO
 
@@ -131,14 +130,4 @@ yarn prod
 
 ## 问题记录
 
-## 1. node 连接 MySQL 问题记录
-
-- 默认只能连接 mysql5.7， mysql8 由于插件缘故，导致密码加密方式变化，需要将 mysql8 的密码设置为 native_password 即可, 如下
-
-```sql
-
-ALTER USER ‘root’@‘localhost’ IDENTIFIED WITH mysql_native_password BY ‘password’; # 更改新的密码，可以将密码设置为简单类型
-
-FLUSH PRIVILEGES;
-
-```
+## 暂无

@@ -5,7 +5,7 @@ import { ResultCodeEnum, ResultMessageEnum } from "../../enums/ResultEmums";
 import { Result } from "../../common/Result";
 import { IResponse } from "../../types";
 import log from "../../utils/log";
-import { getStudentById } from "../../service/ExampleService";
+import { getAllUsers, getStudentById } from "../../service/ExampleService";
 
 const examples = express.Router();
 
@@ -29,11 +29,17 @@ examples.get("/",
         // 参数验证
         // if (!req.query.pagenum || req.query.pagenum <= 0) return res.send(null, 400, "pagenum 参数错误");
         // if (!req.query.pagesize || req.query.pagesize <= 0) return res.sendResult(null, 400, "pagesize 参数错误");
-        log.info(`/user`);
+        log.info(`/`);
         next();
     },
     function (req: Request, res: IResponse, next: NextFunction) {
-        res.send(new Result<string>(ResultCodeEnum.SUCCESS, ResultMessageEnum.SUCCESS).toString());
+        getAllUsers((val: any, msg?: string) => {
+            if (!val) {
+                return res.sendResult(new Result(ResultCodeEnum.QUERY_FAILED, ResultMessageEnum.QUERY_FAILED));
+            } else {
+                return res.sendResult(new Result(ResultCodeEnum.QUERY_SUCCESS, ResultMessageEnum.QUERY_SUCCESS, val));
+            }
+        })
     }
 );
 

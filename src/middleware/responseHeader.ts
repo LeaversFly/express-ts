@@ -1,6 +1,3 @@
-// middleware/responseHeader.ts
-
-// Cors
 import { Request, Response, NextFunction } from 'express'
 
 const responseHeader = (req: Request, res: Response, next: NextFunction) => {

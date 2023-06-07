@@ -5,8 +5,7 @@ import Utils from '../utils/Utils';
 import registerExpressConfig from './registereeExpressConfig';
 import initNacosClient from './registerNacosClient';
 
-const utils = Utils.getInstance();
-const PORT = utils.getConfig<number>("port");
+const PORT = Utils.getInstance().getConfig<number>("port");
 
 async function bootstrap(app: Express) {
 
