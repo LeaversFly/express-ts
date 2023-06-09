@@ -70,13 +70,12 @@ middleware -> routes(api) —> service —> mysql
 ### TODO
 
 1. [] 异常处理机制
-2. 集成 mail 服务
-3. ORM 集成
+2. ORM 集成
 
 ### 配置
 
 1. 根据自己的需要 再 config/default.json 中配置的自己的开发环境 dev（是本地环境，
-2. 修改 config 修改 naocs 的配置，为你的公网 ip 等配置，不然你连接不了
+2. 修改 config 修改 naocs 的配置，为你的公网 ip 等配置，否则无法连接
 
 ```json
 {
